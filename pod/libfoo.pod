@@ -1,0 +1,15 @@
+=head1 NAME
+
+libfoo - A library with even less merit
+
+=head1 SYNOPSIS
+
+ #include <foo.h>
+ 
+ gcc yourcode.c -lfoo
+
+=head1 DESCRIPTION
+
+This library doesn't do anything.
+
+=cut

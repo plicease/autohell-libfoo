@@ -1,0 +1,28 @@
+=head1 NAME
+
+foo - A program without any merit
+
+=head1 SYNOPSIS
+
+ foo [ -v ] [ -n ] [ argument1 [ argument2 [ ... ] ] ]
+ foo -h
+
+=head1 DESCRIPTION
+
+This is a progrm that doesn't really do anything useful.
+
+=head1 OPTIONS
+
+=head2 -v
+
+Print out the version of C<foo> and C<libfoo>.
+
+=head2 -n
+
+Print out the name of C<foo> and C<libfoo>.
+
+=head2 -h
+
+Print out the help message for foo.
+
+=cut
