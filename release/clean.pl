@@ -13,8 +13,7 @@ my $root = file(__FILE__)->parent->parent;
 $_->remove for grep { $_->basename =~ /\.[13]$/ } $root->subdir('man')->children;
 $_->remove for grep { $_->basename =~ /\.txt$/ }  $root->subdir('doc')->children;
 $_->remove for grep { $_->basename =~ /\.o$/ }  $root->subdir('src')->children;
-
-$root->file('src', 'foo')->remove;
+$_->remove for map { $root->file('src', $_) } qw( foo libfoo.a );
 
 foreach my $ldir (['autom4te.cache'],['src','.deps'])
 {

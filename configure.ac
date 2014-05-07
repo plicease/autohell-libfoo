@@ -6,6 +6,7 @@ AC_INIT(libfoo, 1.00, plicease@cpan.org)
 AM_INIT_AUTOMAKE(libfoo, 1.00)
 AC_CONFIG_SRCDIR([examples/example.c])
 AC_CONFIG_HEADERS([config.h])
+AC_PROG_RANLIB
 
 # Checks for programs.
 AC_PROG_CC

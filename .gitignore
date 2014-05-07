@@ -16,3 +16,4 @@ Makefile
 /src/*.o
 /src/foo
 /stamp-h1
+/src/libfoo.a
