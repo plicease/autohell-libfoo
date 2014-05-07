@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.69])
+AC_PREREQ([2.68])
 AC_INIT(libfoo, 1.00, plicease@cpan.org)
 AM_INIT_AUTOMAKE(libfoo, 1.00)
 LT_INIT
