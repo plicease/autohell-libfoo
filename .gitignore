@@ -1,3 +1,4 @@
+*~
 Makefile.in
 Makefile
 /autom4te.cache/
@@ -17,3 +18,11 @@ Makefile
 /src/foo
 /stamp-h1
 /src/libfoo.a
+/config.guess
+/config.sub
+/m4
+/libtool
+/ltmain.sh
+/src/.libs/
+/src/libfoo.la
+/src/libfoo_la-foo.lo

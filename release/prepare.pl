@@ -14,7 +14,13 @@ $root->file('man', 'libfoo.3')->spew(capture_stdout { system 'pod2man', 'pod/lib
 $root->file('doc', 'foo.txt')->spew(capture_stdout { system 'pod2text', 'pod/foo.pod' });
 $root->file('doc', 'libfoo.txt')->spew(capture_stdout { system 'pod2text', 'pod/libfoo.pod' });
 
+say '% libtoolize';
+system 'libtoolize';
+say '% aclocal';
 system 'aclocal';
+say '% autoconf';
 system 'autoconf';
+say '% autoheader';
 system 'autoheader';
+say '% automake --copy --add-missing';
 system 'automake', '--copy', '--add-missing';

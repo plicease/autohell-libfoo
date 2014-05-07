@@ -4,9 +4,10 @@
 AC_PREREQ([2.69])
 AC_INIT(libfoo, 1.00, plicease@cpan.org)
 AM_INIT_AUTOMAKE(libfoo, 1.00)
+LT_INIT
 AC_CONFIG_SRCDIR([examples/example.c])
 AC_CONFIG_HEADERS([config.h])
-AC_PROG_RANLIB
+AC_CONFIG_MACRO_DIR([m4])
 
 # Checks for programs.
 AC_PROG_CC
