@@ -10,3 +10,5 @@ libfoo_a_SOURCES = foo.c foo.h
 lib_LTLIBRARIES = libfoo.la
 libfoo_la_SOURCES = foo.c foo.h
 libfoo_la_CFLAGS = $(AM_CFLAGS)
+
+include_HEADERS = foo.h
