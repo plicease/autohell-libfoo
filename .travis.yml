@@ -10,6 +10,9 @@ install:
   - cpanm Capture::Tiny Path::Class IPC::System::Simple
 
 script:
+  - acloal --version
+  - autoconf --version
+  - automake --version
   - perl release/prepare.pl
   - ./configure --prefix=/tmp/foo
   - make
