@@ -5,7 +5,7 @@ perl:
   - "5.18"
 
 install:
-  - /bin/true
+  - cpanm Capture::Tiny Path::Class IPC::System::Simple
 
 script:
   - perl release/prepare.pl
