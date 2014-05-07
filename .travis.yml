@@ -8,7 +8,7 @@ install:
   - /bin/true
 
 script:
-  - perl release/prepare
+  - perl release/prepare.pl
   - ./configure --prefix=/tmp/foo
   - make
   - make check
