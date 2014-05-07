@@ -5,8 +5,6 @@ perl:
   - "5.18"
 
 install:
-#  - sudo apt-get update
-#  - sudo apt-get install autoconf automake
   - cpanm Capture::Tiny Path::Class IPC::System::Simple
 
 script:
@@ -14,7 +12,10 @@ script:
   - autoconf --version
   - automake --version
   - perl release/prepare.pl
-  - ./configure --prefix=/tmp/foo
+  - ./configure --prefix=/tmp/foo1
   - make
   - make check
   - make install
+  - make dist
+  - tar xf libfoo-1.00.tar.gz
+  - cd libfoo-1.00 && ./configure --prefix=/tmp/foo2 && make && make check && make install
