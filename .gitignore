@@ -26,3 +26,4 @@ Makefile
 /src/.libs/
 /src/libfoo.la
 /src/libfoo_la-foo.lo
+/pkgconfig/libfoo.pc

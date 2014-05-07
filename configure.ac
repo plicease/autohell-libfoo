@@ -8,6 +8,7 @@ LT_INIT
 AC_CONFIG_SRCDIR([examples/example.c])
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
+AC_CONFIG_FILES([pkgconfig/libfoo.pc])
 
 # Checks for programs.
 AC_PROG_CC

@@ -29,11 +29,11 @@ foreach my $ldir (['autom4te.cache'],['src','.deps'], ['m4'], ['src', '.libs'])
 $_->remove for map { $root->file($_) } qw( 
   depcomp install-sh missing aclocal.m4 config.h.in config.h.in config.h
   config.log config.status stamp-h1 autoscan.log config.guess config.sub
-  libtool ltmain.sh
+  libtool ltmain.sh configure
 );
 
 $_->remove for grep { $_->basename =~ /~$/ } $root->children;
 $_->remove for map { ($root->file($_, 'Makefile'), $root->file($_, 'Makefile.in')) } qw( doc man src examples scripts );
 $root->file('Makefile.in')->remove;
 $root->file('Makefile')->remove;
-
+$root->file('pkgconfig', 'libfoo.pc')->remove;
