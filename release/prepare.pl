@@ -9,9 +9,12 @@ use Path::Class qw( file dir );
 
 my $root = file(__FILE__)->parent->parent;
 
-$_->mkpath(0,0755) for map { $root->subdir($_) } qw( man doc );
-
 $root->file('man', 'foo.1')->spew(capture_stdout { system 'pod2man', 'pod/foo.pod' });
 $root->file('man', 'libfoo.3')->spew(capture_stdout { system 'pod2man', 'pod/libfoo.pod' });
 $root->file('doc', 'foo.txt')->spew(capture_stdout { system 'pod2text', 'pod/foo.pod' });
 $root->file('doc', 'libfoo.txt')->spew(capture_stdout { system 'pod2text', 'pod/libfoo.pod' });
+
+system 'aclocal';
+system 'autoconf';
+system 'autoheader';
+system 'automake', '--copy', '--add-missing';
