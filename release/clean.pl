@@ -36,4 +36,5 @@ $_->remove for grep { $_->basename =~ /~$/ } $root->children;
 $_->remove for map { ($root->file($_, 'Makefile'), $root->file($_, 'Makefile.in')) } qw( doc man src examples scripts );
 $root->file('Makefile.in')->remove;
 $root->file('Makefile')->remove;
+$root->file('compile')->remove;
 $root->file('pkgconfig', 'libfoo.pc')->remove;
